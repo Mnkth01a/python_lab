@@ -17,3 +17,6 @@ print("Here's part one: " + "and here's part two.");
 
 # So, these are good examples of how simple print() commands work in python.
 
+# for my next trick, i'm going to do some simple interactive stuff in python.  Well, when i get around tuit.
+
+
