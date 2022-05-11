@@ -2,7 +2,6 @@
 """ Now, i'm stepping it up by working through the ITProTV hands on python course.  This is giving me the experience of writing python script and making it work."""
 
 import argparse
-from audioop import mul
 import commands
 
 # define the multiplication function
@@ -55,12 +54,14 @@ def main():
    
    if args.command == commands.ADD:
       result =sum(args.numbers)
-      print(f"The sum of {args.numbers} is {result}.")
+      operation = " + ".join(str(i) for i in args.numbers)
+      print(f"The sum of {operation} is {result}.")
    
    elif args.command == commands.SUBTRACT:
       first, *rest = args.numbers
       result = first - sum(rest)
-      print(f"The difference of {args.numbers} is {result}.")
+      operation = " - ".join(str(i) for i in args.numbers)
+      print(f"The difference of {operation} is {result}.")
    
    elif args.command == commands.MULTIPLY:
       result = multiply(args.numbers)
