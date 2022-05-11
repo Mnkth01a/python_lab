@@ -1,5 +1,4 @@
-from decimal import DivisionUndefined
-
+""" commands to be imported into cli.py """
 
 ADD      = 'add'
 SUBTRACT = 'sub'
