@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # my first python code
 """ Now, i'm stepping it up by working through the ITProTV hands on python course.  This is giving me the experience of writing python script and making it work."""
 
