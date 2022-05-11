@@ -5,7 +5,9 @@
 This is giving me the experience of writing python script and making it work."""
 
 import argparse
+
 import commands
+
 
 # define the multiplication function
 def multiply(_ns):
@@ -15,48 +17,45 @@ def multiply(_ns):
         result *= _n
     return result
 
+
 # main entry point
 def main():
     """Main entrypoint of the cli."""
     parser = argparse.ArgumentParser()
-    subparsers = parser.add_subparsers(dest='command')
+    subparsers = parser.add_subparsers(dest="command")
 
-    #first command add the numbers input from cli
+    # first command add the numbers input from cli
     add = subparsers.add_parser(commands.ADD)
     add.add_argument(
-      "numbers",
-      nargs="+",
-      type=int,
+        "numbers",
+        nargs="+",
+        type=int,
     )
 
-    #second command subtract the numbers input from cli
+    # second command subtract the numbers input from cli
     sub = subparsers.add_parser(commands.SUBTRACT)
     sub.add_argument(
-      "numbers",
-      nargs="+",
-      type=int,
+        "numbers",
+        nargs="+",
+        type=int,
     )
 
-    #third command multiply the numbers input from cli
+    # third command multiply the numbers input from cli
     mul = subparsers.add_parser(commands.MULTIPLY)
-    mul.add_argument(
-       "numbers",
-       nargs="+",
-       type=int
-    )
+    mul.add_argument("numbers", nargs="+", type=int)
 
-    #and fourth command divide the numbers input from cli
+    # and fourth command divide the numbers input from cli
     div = subparsers.add_parser(commands.DIVIDE)
     div.add_argument(
-       "numbers",
-       nargs="+",
-       type=int,
+        "numbers",
+        nargs="+",
+        type=int,
     )
 
     args = parser.parse_args()
 
     if args.command == commands.ADD:
-        result =sum(args.numbers)
+        result = sum(args.numbers)
         operation = " + ".join(str(i) for i in args.numbers)
         print(f"The sum of {operation} is {result}.")
 
@@ -79,6 +78,7 @@ def main():
 
     else:
         parser.print_help()
+
 
 if __name__ == "__main__":
     main()
