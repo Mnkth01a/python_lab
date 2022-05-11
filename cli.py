@@ -21,6 +21,8 @@ def multiply(_ns):
 # main entry point
 def main():
     """Main entrypoint of the cli."""
+
+    # this creates an instance of argparse called parser with a ArgumentParser constructor.
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(dest="command")
 
