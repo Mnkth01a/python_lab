@@ -19,7 +19,7 @@ def main():
    parser = argparse.ArgumentParser()
    subparsers = parser.add_subparsers(dest='command')
 
-   #first command
+   #first command add the numbers input from cli
    add = subparsers.add_parser(commands.ADD)
    add.add_argument(
       "numbers", 
@@ -27,7 +27,7 @@ def main():
       type=int,
    )
 
-   #second command
+   #second command subtract the numbers input from cli
    sub = subparsers.add_parser(commands.SUBTRACT)
    sub.add_argument(
       "numbers", 
@@ -35,6 +35,7 @@ def main():
       type=int,
    )
 
+   #third command multiply the numbers input from cli
    mul = subparsers.add_parser(commands.MULTIPLY)
    mul.add_argument(
       "numbers",
@@ -42,6 +43,7 @@ def main():
       type=int
    )
 
+   #and fourth command divide the numbers input from cli
    div = subparsers.add_parser(commands.DIVIDE)
    div.add_argument(
       "numbers",
