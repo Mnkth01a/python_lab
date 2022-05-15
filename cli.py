@@ -8,6 +8,7 @@ import argparse
 
 import liblocal.commands as commands
 
+
 # define the multiplication function
 def multiply(_ns):
     """Multiplies all of the numbers contained in ns."""
