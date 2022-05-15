@@ -6,7 +6,7 @@ This is giving me the experience of writing python script and making it work."""
 
 import argparse
 
-import commands
+import liblocal.commands as commands
 
 # define the multiplication function
 def multiply(_ns):
